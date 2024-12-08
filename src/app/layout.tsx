@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Toaster } from "@/components/ui/sonner";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -28,7 +29,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="md:w-7/12 w-11/12 mx-auto">
+          <div className="py-8">
+            <h1 className="font-bold text-3xl tracking-tight text-white bg-black inline-block rounded-md p-2">
+              Readaton
+            </h1>
+          </div>
+          {children}
+          <Toaster />
+        </div>
       </body>
     </html>
   );
