@@ -2,12 +2,10 @@ import { BookType } from "@/lib/types/book";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Button } from "./ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 type ReadbookProps = {
