@@ -13,6 +13,7 @@ import { PopoverContent } from "./ui/popover";
 import { analyzeBook } from "@/app/actions/analyzeBook";
 import { useState, useTransition } from "react";
 import { Prompts } from "@/lib/enums/prompts";
+import { ScrollArea } from "./ui/scroll-area";
 
 export default function AITools({ text }: { text: string }) {
   const [isPending, startTransition] = useTransition();
@@ -98,9 +99,11 @@ export default function AITools({ text }: { text: string }) {
               </div>
             )}
             {aiResponse && (
-              <div className="p-2 mx-auto border border-gray-200 rounded whitespace-pre-wrap font-mono">
-                {aiResponse}
-              </div>
+              <ScrollArea className="h-screen w-full rounded-md mx-auto">
+                <div className="p-2 mx-auto border border-gray-200 rounded whitespace-pre-wrap font-mono mb-24">
+                  {aiResponse}
+                </div>
+              </ScrollArea>
             )}
           </div>
         </SheetContent>
