@@ -45,7 +45,7 @@ export default function AITools({ text }: { text: string }) {
           >
             <h4 className="font-semibold leading-none">Plot Summary</h4>
             <p className="text-sm text-muted-foreground">
-              Generate a concise, comprehensive overview of the book's key
+              Generate a concise, comprehensive overview of the book&apos;s key
               narrative elements
             </p>
           </div>
@@ -68,7 +68,7 @@ export default function AITools({ text }: { text: string }) {
           >
             <h4 className="font-semibold leading-none">Sentiment Analysis</h4>
             <p className="text-sm text-muted-foreground">
-              Dive deep into the book's emotional landscape,
+              Dive deep into the book&apos;s emotional landscape,
             </p>
           </div>
 

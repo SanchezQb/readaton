@@ -10,7 +10,7 @@ export function getFromLocalStorage(key: string) {
   try {
     const data = localStorage.getItem(key);
     return data ? JSON.parse(data) : [];
-  } catch (error) {
+  } catch {
     return null;
   }
 }
@@ -20,8 +20,7 @@ function saveToLocalStorage(key: string, books: BookType[]): boolean {
     const serializedData = JSON.stringify(books);
     localStorage.setItem(key, serializedData);
     return true;
-  } catch (error) {
-    console.error('Error saving to localStorage:', error);
+  } catch {
     return false;
   }
 }
@@ -36,7 +35,7 @@ export function findSavedBook(key: string, id: string): BookType | null {
       return found;
     }
     return null;
-  } catch (error) {
+  } catch {
     return null;
   }
 }
@@ -56,8 +55,7 @@ export function addBook(key: string, book: BookType): boolean {
     }
 
     return false;
-  } catch (error) {
-    console.error('Error adding object to localStorage:', error);
+  } catch {
     return false;
   }
 }

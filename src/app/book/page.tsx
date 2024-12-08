@@ -17,7 +17,7 @@ export default function Book() {
     if (found) {
       setBook(found);
     }
-  }, []);
+  }, [id]);
 
   if (!book) {
     return (
