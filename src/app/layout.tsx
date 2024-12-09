@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Toaster } from "@/components/ui/sonner";
 import localFont from "next/font/local";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,13 +31,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="md:w-7/12 w-11/12 mx-auto">
-          <a href="/">
+          <Link href="/">
             <div className="py-8">
               <h1 className="font-bold text-3xl tracking-tight text-white bg-black inline-block rounded-md p-2">
                 Readaton
               </h1>
             </div>
-          </a>
+          </Link>
 
           {children}
           <Toaster />
