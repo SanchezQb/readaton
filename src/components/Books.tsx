@@ -30,7 +30,7 @@ export default function Books({ books }: Props) {
           </Button>
         </Link>
       </div>
-      <div className="grid md:grid-cols-4 gap-8 grid-cols-2 p-8 place-items-center bg-gray-50 mt-4 rounded-md">
+      <div className="grid md:grid-cols-3 gap-8 grid-cols-2 p-8 place-items-center bg-gray-50 mt-4 rounded-md">
         {books.map((book: BookType) => {
           return (
             <Link href={`/book?id=${book.id}`} key={book.id}>

@@ -30,11 +30,14 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="md:w-7/12 w-11/12 mx-auto">
-          <div className="py-8">
-            <h1 className="font-bold text-3xl tracking-tight text-white bg-black inline-block rounded-md p-2">
-              Readaton
-            </h1>
-          </div>
+          <a href="/">
+            <div className="py-8">
+              <h1 className="font-bold text-3xl tracking-tight text-white bg-black inline-block rounded-md p-2">
+                Readaton
+              </h1>
+            </div>
+          </a>
+
           {children}
           <Toaster />
         </div>
